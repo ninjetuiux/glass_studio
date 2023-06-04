@@ -4,9 +4,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'verla': ['Varela Round', 'sans-serif'],
+      },
       colors: {
-        primary: '#000000',
-        secondary: '#ffffff',
+        primary: '#0d1117',
+        secondary: '#e6edf3',
       },
     },
   },

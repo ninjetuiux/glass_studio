@@ -1,0 +1,28 @@
+$text-primary: #e6edf3;
+$text-secondary: #0d1117;
+$background-primary: #0d1117;
+$background-secondary: #e6edf3;
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+// styles.scss
+
+.light-theme {
+    color: $text-secondary;
+    background-color: $background-secondary;
+  }
+  
+  .dark-theme {
+    color: $text-primary;
+    background-color: $background-primary;
+  }
