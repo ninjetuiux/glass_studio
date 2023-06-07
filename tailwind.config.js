@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(20px)',
+      },
       fontFamily: {
         'verla': ['Varela Round', 'sans-serif'],
       },
@@ -14,5 +18,6 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+  ],
 };

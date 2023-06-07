@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 // A component that generates a list item for each entry in the navItems array
 const NavBarItem = ({ navItems, themeMode }) => (
   // We map through navItems array to create a <li> for each item
-  navItems.map(({url, name, icon}) => (
+  navItems.map(({url, name, icon}, i) => (
     // Creating a list item with various CSS styles and classes
     // If the themeMode is dark, it adds a few more CSS classes
     <li 
+      key={i}
       className= {`
       p-3
       h-full
@@ -20,7 +21,7 @@ const NavBarItem = ({ navItems, themeMode }) => (
       shadow-md
       cursor-pointer
       transition-all
-      ${themeMode === 'dark' ? 'bg-primary/75 hover:scale-105 transition-colors' : ''}
+      ${themeMode === 'dark' ? 'bg-secondary/5 hover:scale-105 transition-colors' : 'bg-primary/5'}
       `}>
       {/* A div that acts as a flex container */}
       <div className={`flex h-12 items-center gap-2 w-full justify-center text-2xl `}>
