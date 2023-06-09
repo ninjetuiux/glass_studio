@@ -14,20 +14,21 @@ import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <ThemeProvider> {/* Wrap the app with the ThemeProvider */}
-      <div className="App"> {/* Root div with the 'App' class */}
-        <Router> {/* Set up the router */}
-          <Layout> {/* Use the Layout component as a common wrapper */}
-          <Navbar />
-            <Routes> {/* Define the routes */}
-              <Route path="/" element={<Home />} /> {/* Route for the Home page */}
-              <Route path="/who_we_are" element={<WhoWeAre />} /> {/* Route for the WhoWeAre page */}
-              <Route path="/our_services" element={<OurServices />} /> {/* Route for the OurServices page */}
-              <Route path="/portfolio" element={<Portfolio />} /> {/* Route for the Portfolio page */}
-              <Route path="/testimonials" element={<Testimonials />} /> {/* Route for the Testimonials page */}
-              <Route path="/contact_us" element={<ContactUs />} /> {/* Route for the ContactUs page */}
-              {/* ... etc. */}
-            </Routes>
+    <ThemeProvider>
+      <div className="App">
+        <Router>
+          <Navbar className="relative z-100" /> {/* Move Navbar outside Layout */}
+          <Layout>
+            <div className=""> {/* Remove Navbar from Layout */}
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/who_we_are" element={<WhoWeAre />} />
+                <Route path="/our_services" element={<OurServices />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/testimonials" element={<Testimonials />} />
+                <Route path="/contact_us" element={<ContactUs />} />
+              </Routes>
+            </div>
           </Layout>
         </Router>
       </div>
