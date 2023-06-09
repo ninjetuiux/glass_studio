@@ -20,7 +20,7 @@ export default function HomeSpinningComp({ text }) {
         className={`font-verla ${theme === 'dark' ? 'text-secondary': ''} hidden md:flex`}
         style={{ position: 'relative', width: '200px', height: '200px' }}>
             <motion.svg
-                style={{ position: 'absolute', width: '100%', height: '100%' }}
+                style={{ position: 'absolute', width: '100%', height: '100%', fontFamily: 'verla'}}
                 viewBox="0 0 250 250"
                 animate={{ rotate: -360 }}
                 transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
