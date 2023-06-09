@@ -6,8 +6,8 @@ import HomeSpinningComp from '../components/home_spinning_component/HomeSpinning
 export default function Home() {
   return (
     <Layout>
-      <div className="flex flex-grow flex-1 h-screen md:pt-5 sm:pt-12 sm:w-full w-[92%] justify-center pr-6 sm:px-5 z-0">
-        <div className="flex">
+      <div className="flex flex-1 min-h-screen md:pt-5 sm:pt-12 w-full justify-center sm:mr-[19%] z-0">
+        <div className="flex sm:pl-[20%] xl:pl-[40%] px-3 sm:px-0 ">
           <div className="flex flex-col mt-12 md:justify-center items-center">
             <div className="flex flex-col text-center flex-nowrap w-full h-[20%] bg-[#181c23] bg-opacity-25 rounded-xl p-6 m-5 justify-center shadow-xl">
               <h1 className="md:text-6xl text-xl flex-nowrap">אומנות בזכוכית</h1>

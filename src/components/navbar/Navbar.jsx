@@ -54,9 +54,9 @@ export default function Navbar() {
   // Component rendering
   return (
     <Layout> {/* Wrapper component */}
-      <div className={`sm:min-h-screen ${isToggled ? 'h-screen': ''} sm:w-1/4 flex overflow-hidden font-verla ${theme} fixed`}>
+      <div className={`sm:min-h-screen ${isToggled ? 'h-screen': ''} sm:w-1/4 flex overflow-hidden font-verla ${theme} z-100 fixed`}>
         {/* Mobile View */}
-        <div className="sm:hidden relative flex w-screen h-12 shadow-md items-center md:px-10 ">
+        <div className="sticky sm:hidden top-0 flex w-screen h-12 mb-12 shadow-md items-center md:px-10">
           {/* Button to toggle the visibility of the navigation menu */}
           <button
             onClick={ToggleHandler}
@@ -65,7 +65,7 @@ export default function Navbar() {
             <MenuRoundedIcon />
           </button>
           {isToggled && (
-            <div className={`w-screen h-screen top-12 fixed flex flex-col justify-between items-center  ${themeMode === 'dark' ? 'bg-primary': 'bg-secondary'}`}>
+            <div className={`w-screen h-screen top-12 fixed flex flex-col justify-between items-center z-100  ${themeMode === 'dark' ? 'bg-primary': 'bg-secondary'}`}>
               <ul className={`flex flex-col w-[90%] justify-center items-around relative gap-10 whitespace-nowrap shadow-sm mt-12 p-12 ${themeMode === 'dark' ? 'bg-primary/75 transition-colors' : 'bg-secondary'}`}>
                 {/* Theme Toggle Button */}
                 <button

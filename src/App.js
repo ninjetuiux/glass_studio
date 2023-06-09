@@ -19,7 +19,7 @@ function App() {
         <Router>
           <Navbar className="relative z-100" /> {/* Move Navbar outside Layout */}
           <Layout>
-            <div className="sm:mr-[20%] xl:mr-[8%] m-0"> {/* Remove Navbar from Layout */}
+            <div className=""> {/* Remove Navbar from Layout */}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/who_we_are" element={<WhoWeAre />} />
