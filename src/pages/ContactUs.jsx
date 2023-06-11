@@ -39,7 +39,7 @@ export default function ContactUs() {
 
   return (
     <div className="w-screen h-screen grid place-items-center sm:mr-[18%] sm:pl-[18%] 2xl:pl-[40%] grid-cols-1">
-      <div className="absolute top-12 text-6xl font-verla">
+      <div className="absolute top-24 text-6xl font-verla">
         <h1>צור קשר</h1>
       </div>
       <form ref={form} onSubmit={sendEmail}>

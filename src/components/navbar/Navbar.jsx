@@ -54,7 +54,7 @@ export default function Navbar() {
   // Component rendering
   return (
     <Layout> {/* Wrapper component */}
-      <div className={`sm:min-h-screen ${isToggled ? 'h-screen': ''} sm:w-1/4 flex font-verla ${theme} z-100 sm:pb-0 pb-3 sm:fixed`}>
+      <div className={`sm:min-h-screen absolute h-full sm:h-auto ${isToggled ? 'h-screen': ''} sm:w-1/4 flex font-verla ${theme} z-100 sm:pb-0 pb-3 sm:fixed`}>
         {/* Mobile View */}
         <div className="sticky bg-secondary z-100 sm:hidden top-0 flex w-screen h-12 shadow-md items-center md:px-10">
           {/* Button to toggle the visibility of the navigation menu */}
@@ -96,7 +96,7 @@ export default function Navbar() {
               <ul className="flex gap-3 w-full justify-center mt-5">
                 <li>
                   <a
-                    href="https://facebook.com"
+                    href="https://m.facebook.com/%D7%90%D7%95%D7%9E%D7%A0%D7%95%D7%AA-%D7%91%D7%96%D7%9B%D7%95%D7%9B%D7%99%D7%AA-%D7%94%D7%AA%D7%A7%D7%A0%D7%95%D7%AA-%D7%A4%D7%A8%D7%95%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D-%D7%95%D7%A2%D7%99%D7%A6%D7%95%D7%91-%D7%91%D7%96%D7%9B%D7%95%D7%9B%D7%99%D7%AA-105291017622400/?ref=bookmarks"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#63a38a] cursor-pointer"
@@ -106,7 +106,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/an_artist_in_glass/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#63a38a] cursor-pointer"
@@ -116,7 +116,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    href="https://whatsapp.com"
+                    href="https://api.whatsapp.com/send?phone=9720502802330"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#63a38a] cursor-pointer"

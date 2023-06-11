@@ -3,7 +3,6 @@ import './index.css'; // Importing the index.css file
 import './App.scss'; // Importing the App.scss file
 import Home from './pages/Home';
 import WhoWeAre from './pages/WhoWeAre';
-import OurServices from './pages/OurServices';
 import Portfolio from './pages/Portfolio';
 import Testimonials from './pages/Testimonials';
 import ContactUs from './pages/ContactUs';
@@ -23,7 +22,6 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/who_we_are" element={<WhoWeAre />} />
-                <Route path="/our_services" element={<OurServices />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/contact_us" element={<ContactUs />} />

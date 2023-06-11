@@ -21,7 +21,7 @@ export default function WhoWeAre() {
 
   return (
     <Layout>
-      <div className={`md:pt-5 sm:pl-[18%] sm:mr-[18%] sm:pr-6 sm:px-5 ${isOverflowYEnabled ? 'overflow-y-auto' : ''}`}>
+      <div className={`md:pt-5 sm:pl-[18%] sm:mr-[18%] sm:pr-6 pt-24 sm:pt-5 sm:px-5 ${isOverflowYEnabled ? 'overflow-y-auto' : ''}`}>
         <div className={`md:pb-10 grid grid-cols-1 2xl:w-[70vw] md:grid-cols-2 gap-3 px-3 xl:gap-10 md:h-auto min-h-screen overflow-hidden items-center ${isReverseOrder ? 'md:flex-row-reverse' : ''}`}>
           <div className="bg-[#181c23] rounded-xl p-6 shadow-xl flex flex-col h-full max-h-96 w-full md:mt-0">
             <h1 className="lg:text-4xl text-xl font-bold text-white leading-tight">

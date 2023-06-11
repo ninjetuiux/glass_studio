@@ -30,7 +30,7 @@ export default function CustomImageList() {
         <h1 className="text-6xl font-verla">תיק עבודות</h1>
         <h4 className='text-2xl font-verla'>אומנות בזכוכית</h4>
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 xl:w-full items-center h-auto mt-12 pb-12'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-3 xl:w-full items-center h-auto mt-12 pb-12'>
         <div className='col-span-1 h-auto min-w-96'>
           <img 
           src={`${GalleryImg1}`} 
