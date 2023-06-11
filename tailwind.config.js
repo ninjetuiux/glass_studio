@@ -18,4 +18,8 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  corePlugins: {
+    // ...
+    pointerEvents: true,
+  }
 };

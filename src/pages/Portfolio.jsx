@@ -80,27 +80,44 @@ export default function CustomImageList() {
           />
         </div>
         <Modal
-          open={open !== null}
-          onClose={handleClose}
+        open={open !== null}
+        onClose={handleClose}
+      >
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            position: 'relative', 
+            height: '100vh' 
+          }}
         >
-          <Box 
-            sx={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center', 
-              height: '100vh' 
+          <img 
+            src={open} 
+            alt='Enlarged' 
+            style={{ 
+              maxHeight: '80vh', 
+              maxWidth: '80vw' 
+            }} 
+          />
+          <div 
+            style={{ 
+              position: 'absolute', 
+              top: '10px', 
+              right: '10px', 
+              cursor: 'pointer',
+              fontSize: '2rem',
+              color: 'white',
+              background: 'rgba(0,0,0,0.5)',
+              borderRadius: '50%'
             }}
+            onClick={handleClose}
           >
-            <img 
-              src={open} 
-              alt='Enlarged' 
-              style={{ 
-                maxHeight: '80vh', 
-                maxWidth: '80vw' 
-              }} 
-            />
-          </Box>
-        </Modal>
+            X
+          </div>
+        </Box>
+      </Modal>
+
       </div>
     </div>
   );

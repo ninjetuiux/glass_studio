@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
+import { NavbarContext } from '../../context/NavbarContext';
 import Layout from '../layout-theme/Layout';
 import NavbarItem from './NavbarItem';
 // import { Link } from 'react-router-dom';
@@ -20,6 +21,7 @@ import HomeIcon from '@mui/icons-material/Home';
 export default function Navbar() {
   // Get theme and toggleTheme function from ThemeContext
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const { isNavbarOpen, ToggleNavbar} = useContext(NavbarContext);
   const [themeMode, setThemeMode] = useState('light');
 
   // Function to handle theme toggle
@@ -48,24 +50,26 @@ export default function Navbar() {
 
   // Handler to toggle the visibility of the navigation menu
   const ToggleHandler = () => {
-    setIsToggled((prevToggle) => !prevToggle);
+    setIsToggled((prevToggle) => !prevToggle)
+    ToggleNavbar()
   };
 
   // Component rendering
   return (
     <Layout> {/* Wrapper component */}
-      <div className={`sm:min-h-screen absolute h-full sm:h-auto ${isToggled ? 'h-screen': ''} sm:w-1/4 flex font-verla ${theme} z-100 sm:pb-0 pb-3 sm:fixed`}>
+      <div className={`sm:min-h-screen absolute  sm:h-auto ${isToggled ? 'h-screen': ''} sm:w-1/4 flex font-verla ${theme} sm:z-10 ${isNavbarOpen ? 'z-50 pointer-events-auto sm:pointer-events-none' : ''}`}>
         {/* Mobile View */}
-        <div className="sticky bg-secondary z-100 sm:hidden top-0 flex w-screen h-12 shadow-md items-center md:px-10">
+        <div className="sticky bg-secondary sm:hidden top-0 flex w-screen h-12 shadow-md items-center md:px-10">
           {/* Button to toggle the visibility of the navigation menu */}
           <button
             onClick={ToggleHandler}
-            className="p-0 m-0 flex cursor-pointer hover:rotate-360 px-10"
+            className="p-0 m-0 flex cursor-pointer hover:rotate-360 px-10 pointer-events-auto" // added pointer-events-auto
           >
-            <MenuRoundedIcon />
+            {themeMode === 'dark' ? <MenuRoundedIcon color='action' /> : <MenuRoundedIcon />}
+            {/* <MenuRoundedIcon /> */}
           </button>
           {isToggled && (
-            <div className={`w-screen h-screen top-12 fixed flex flex-col justify-between items-center  ${themeMode === 'dark' ? 'bg-primary': 'bg-secondary'}`}>
+            <div className={`w-screen h-full ${isNavbarOpen === true ? 'h-auto' : ''} overflow-scroll z-[100] pb-12 top-12 fixed flex flex-col justify-between items-center ${themeMode === 'dark' ? 'bg-primary': 'bg-secondary'}`}>
               <ul className={`flex flex-col w-[90%] justify-center items-around relative gap-10 whitespace-nowrap shadow-sm mt-12 p-12 ${themeMode === 'dark' ? 'bg-primary/75 transition-colors' : 'bg-secondary'}`}>
                 {/* Theme Toggle Button */}
                 <button

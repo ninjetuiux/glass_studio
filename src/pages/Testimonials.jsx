@@ -4,7 +4,7 @@ import Ava2 from '../../public/assets/avatar/ava2.jpg'
 export default function Testimonials() {
   return (
     <div className="grid place-items-center w-screen h-auto sm:h-screen sm:overflow-hidden gap-3 sm:pr-[20%] xl:pr[0%] xl:ml-[0]  pt-28 sm:pt-0">
-      <h1 className="absolute xl:top-36 lg:top-16 sm:top-7 top-16 lg:text-6xl sm:text-3xl text-2xl font-verla">מה הלקוחות חושבים עלינו</h1>
+      <h1 className="xl:top-36 lg:top-16 sm:top-7 top-16 mb-16 sm:mb-0 lg:text-6xl sm:text-3xl text-2xl font-verla">מה הלקוחות חושבים עלינו</h1>
       <div className="grid grid-rows-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 items-center px-3 xl:px-0 xl:pl-3">
         <div className="col-span-1">
           <div className='font-verla bg-primary text-secondary rounded-xl flex justify-center p-5'>
